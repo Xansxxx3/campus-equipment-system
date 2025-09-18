@@ -12,11 +12,11 @@ public class studentController {
 
     @Autowired studentService studentservice;
 
-    @PutMapping("/add")
+    @PostMapping("")
             public String createStudent(@RequestBody studentEntity student){
         return studentservice.createStudent(student.getStudentNo(),student.getName(),student.getEmail());
     }
-    @GetMapping("/getAll")
+    @GetMapping("")
     public List<studentEntity> getAllStudent(){
         return studentservice.getAllStudent();
     }

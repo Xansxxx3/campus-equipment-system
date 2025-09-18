@@ -109,7 +109,7 @@ public class loanService {
             equipment.setAvailability(true);
             equipmentrepo.save(equipment);
         } else {
-            return "Equipment not found for loan ID: " + loanId;
+            return "Equipment not found for loan ID: " + loanId + " Or loan already returned";
         }
 
         // Return success message with loan ID

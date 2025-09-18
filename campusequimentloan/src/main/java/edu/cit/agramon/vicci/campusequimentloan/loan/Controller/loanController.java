@@ -14,12 +14,12 @@ public class loanController {
     @Autowired
     loanService loanservice;
 
-    @PutMapping("/add")
+    @PostMapping()
     public String createLoan(@RequestBody loanEntity loan){
         return loanservice.createLoan(loan.getEquipment(), loan.getStudent(),  loan.getStartDate());
     }
 
-    @GetMapping("/getAll")
+    @GetMapping()
     public List<loanEntity> getAllLoans(){
         return loanservice.getAllLoans();
     }

@@ -13,12 +13,12 @@ public class equipmentController {
     @Autowired
     equipmentService equipmentservice;
 
-        @PutMapping("/add")
+        @PostMapping("")
         public String createEquipment(@RequestBody equipmentEntity equipment){
             return equipmentservice.createEquipment(equipment.getName(), equipment.getType(), equipment.getSerialNumber());
         }
 
-        @GetMapping("/getAll")
+        @GetMapping("")
         public List<equipmentEntity> getAllEquipment(){
             return equipmentservice.getAllEquipment();
         }
