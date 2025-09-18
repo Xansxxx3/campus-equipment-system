@@ -51,8 +51,8 @@ The penalty system works as follows:
 - **Item**: Laptop
 - **Loan Period**: 7 days
 - **Return Date**: 9 days after the loan start date
-- **Late Fee**: $2/day
-- **Total Penalty**: 2 days * $2/day = **$4**
+- **Late Fee**: P50/day
+- **Total Penalty**: 2 days * P50/day = **P50**
 
 
 
