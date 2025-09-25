@@ -1,12 +1,13 @@
 package edu.cit.agramon.vicci.campusequimentloan.student.Entity;
 
+import edu.cit.agramon.vicci.campusequimentloan.user.Entity.userEntity;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
-public class studentEntity {
+public class studentEntity extends userEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,15 +15,15 @@ public class studentEntity {
 
     private String studentNo;
     private String name;
-    private String email;
+
 
     // Constructors
     public studentEntity() {}
 
-    public studentEntity(String studentNo, String name, String email) {
+    public studentEntity(String studentNo, String name) {
         this.studentNo = studentNo;
         this.name = name;
-        this.email = email;
+
     }
 
     // Getters and setters
@@ -51,11 +52,7 @@ public class studentEntity {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
-    }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+
+    
 }
